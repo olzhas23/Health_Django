@@ -1,8 +1,6 @@
 BeautifulSoup==3.2.1
 Codeville==0.8.0
 Django==1.9.1
-Flask==0.10.1
-Jinja2==2.8
 Mako==1.0.3
 MarkupSafe==0.23
 PIL==1.1.7
