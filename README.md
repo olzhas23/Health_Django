@@ -10,7 +10,7 @@ Health
 
 TODO
 
-1. 
-2.
-3.
-4.
+1. add webpack, react
+2. hide db config
+3. debug=false
+4. test
