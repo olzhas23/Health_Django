@@ -2,9 +2,9 @@
 
 Health 
   
-  Doctors
+  ..*Doctors
 
-  Patients
+  ..*Patients
 
 ***
 
