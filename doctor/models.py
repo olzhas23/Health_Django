@@ -6,9 +6,9 @@ from django.utils.timezone import now
 class Doctor(models.Model):
 
     ID = models.AutoField(primary_key= True, max_length=10)
-    FIRSTNAME = models.CharField('FIRSTNAME', max_length=40)
-    LASTNAME = models.CharField ('LASTNAME', max_length=40)
-    MIDLLENAME = models.CharField('MIDLLENAME', max_length=40)
+    FIRSTNAME = models.CharField(max_length=40)
+    LASTNAME = models.CharField (max_length=40)
+    MIDLLENAME = models.CharField(max_length=40)
     DOB = models.DateField(max_length=8)
     SSN = models.IntegerField(4)
 

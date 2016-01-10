@@ -28,5 +28,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^patient/', include('patient.urls')),
     url(r'^doctor/', include('doctor.urls')),
-    url(r'$',include('doctor.urls') ),
+    url(r'',include('doctor.urls') ),
 ]
