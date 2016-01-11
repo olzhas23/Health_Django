@@ -1,44 +1,39 @@
 __author__ = 'Olzhas'
 from django.shortcuts import render
 from django.http import HttpResponse
-from TasksManager.models import Supervisor, Developer
-# View for create_developer
-def page(request):
+from doctor.models import Doctor, Patient
+
+# View for create_patient
+
+def page(req):
   error = False
-  # If form has posted
-  if request.POST:
-  # This line checks if the data was sent in POST. If so, this means
-that the form has been submitted and we should treat it.
-    if 'name' in request.POST:
-    # This line checks whether a given data named name exists in the
-POST variables.
-      name = request.POST.get('name', '')
-      # This line is used to retrieve the value in the POST
-dictionary. Normally, we perform filters to recover the data to avoid
-false data, but it would have required many lines of code.
+
+  if req.POST:
+    if 'name' in req.POST:
+        name = req.POST.get('name', '')
+
     else:
       error=True
-    if 'login' in request.POST:
-      login = request.POST.get('login', '')
+    if 'login' in req.POST:
+      login = req.POST.get('login', '')
     else:
       error=True
-if 'password' in request.POST:
-      password = request.POST.get('password', '')
+  if 'password' in req.POST:
+      password = req.POST.get('password', '')
     else:
       error=True
-    if 'supervisor' in request.POST:
-      supervisor_id = request.POST.get('supervisor', '')
+    if 'doctor' in req.POST:
+      doctor_id = req.POST.get('doctor', '')
     else:
       error=True
     if not error:
-      # We must get the supervisor
-      supervisor = Supervisor.objects.get(id = supervisor_id)
-      new_dev = Developer(name=name, login=login, password=password,
-supervisor=supervisor)
-      new_dev.save()
-      return HttpResponse("Developer added")
+
+      doctor = doctor.objects.get(id = doctor_id)
+      new_patient = patient(FIRSTNAME=f_name, LASTNAME=l_name)
+      new_patient.save()
+      return HttpResponse("New Patient added")
     else:
-      return HttpResponse("An error as occured")
+      return HttpResponse("N/A")
   else:
-    supervisors_list = Supervisor.objects.all()
-    return render(request, 'en/public/create_developer.html')
+    patient_list = Doctor.objects.all()
+    return render(request, 'newnew.html')
