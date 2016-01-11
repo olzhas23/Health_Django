@@ -9,7 +9,7 @@ class PostForm(forms.ModelForm):
 
         model = Patient
         #add notes latter
-        #doctor_rec = Notes
-        fields = ('FIRSTNAME', 'LASTNAME','DOB', 'SSN','INSURANCE')
+        doctor_rec = Notes
+        fields = ('FIRSTNAME', 'LASTNAME','DOB', 'SSN','NUMBER', 'STREET','CITY', 'STATE','ZIP', 'NOTES')
 
 
