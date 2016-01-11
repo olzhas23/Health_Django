@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import django.db.models.deletion
+import django.db.models.deletion, uuid
 
 
 class Migration(migrations.Migration):
@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Doctor',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID', default=uuid.uuid1)),
                 ('FIRSTNAME', models.CharField(max_length=40, verbose_name='FIRSTNAME')),
                 ('LASTNAME', models.CharField(max_length=40, verbose_name='LASTNAME')),
                 ('MIDLLENAME', models.CharField(max_length=40, verbose_name='MIDLLENAME')),

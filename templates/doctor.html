@@ -1,0 +1,30 @@
+{% extends "templates/base.html" %}
+
+
+{% block page_title %}<h1>Existing Patient List</h1>{% endblock %}
+{% block content %}
+
+  {% if patient_name|length > 0 %}
+  <table>
+    <thead>
+      <tr>
+        <td>Patient Name</td>
+        <td>SSN</td>
+      </tr>
+    </thead>
+    <tbody>
+    {% for project in patient_name %}
+      <tr>
+        <td>{{ project.FIRSTNAME }}</td>
+        <td>{{ project.SSN }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <span>No Data is available.</span>
+  {% endif %}
+{% endblock %}
+
+{% block two %}doctor.html{% endblock %}
+

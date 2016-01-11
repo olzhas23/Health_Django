@@ -15,18 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-
-
-
-
-
-
-
+from doctor import views
 
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
-    url(r'^patient/', include('patient.urls')),
-    url(r'^doctor/', include('doctor.urls')),
-    url(r'',include('doctor.urls') ),
+
+    url(r'^index/$', views.index, name='patient'),
+
+    url(r'^existing_patient/$', views.existing_patient, name='doctor'),
+
+    url(r'^existing_patient/$', views.existing_patient, name='admin'),
+
+    url(r'',views.search),
 ]

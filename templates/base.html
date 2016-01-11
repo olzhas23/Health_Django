@@ -1,0 +1,43 @@
+<html>
+  <head>    {% load staticfiles %}
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
+
+    <title>
+
+
+     {% block page_title %}This is Health-Doc-Pat APP{% endblock %}
+
+
+    </title>
+  </head>
+  <body>
+        <div class="page-header">
+            <a href="{% url 'patient' %}" class="top-menu"><span class="glyphicon">Patient</span></a>
+
+            <a href="{% url 'doctor' %}" class="top-menu"><span class="glyphicon">Doctor</span></a>
+
+            <a href="{% url 'admin' %}" class="top-menu"><span class="glyphicon">Admin</span></a>
+
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+
+
+
+      {% block two %}{% endblock %}
+
+  </body>
+</html>

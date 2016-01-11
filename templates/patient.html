@@ -1,0 +1,15 @@
+{% extends 'templates/base.html' %}
+
+{% block page_title %}This is Health-Doc-Pat APP{% endblock %}
+
+{% block content %}
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+
+ {% block two %}
+     <h1>Patient.html</h1>
+ {% endblock %}
