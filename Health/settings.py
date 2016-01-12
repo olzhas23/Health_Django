@@ -21,10 +21,10 @@ BASE_DIR = os.path.dirname((os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
  #SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'olzhasq9i5nc)r9*nc3tsw!r5a$au58om&)l8022_c_^6zg#2s869*q#'
+#SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['https://health-doc-pat.herokuapp.com']
@@ -79,11 +79,8 @@ WSGI_APPLICATION = 'Health.wsgi.application'
 
 DATABASES = {
     'default': {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-       # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
-      #  'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'NAME': os.path.join(BASE_DIR, 'health'),
+        'ENGINE': "django.db.backends.postgresql_psycopg2",
+         'NAME': os.path.join(BASE_DIR, 'health'),
        # 'USER': 'dcd2vank3u6bia',
  #       'PASSWORD': 'jZhoezZDVmk9vIDXKqh70cmlcY',
       #  'HOST': 'ec2-75-101-143-150.compute-1.amazonaws.com',
