@@ -78,7 +78,7 @@
                   <h5 class="centered">Health</h5>
                     
                   <li class="mt">
-                      <a class="active" href="{% url }">
+                      <a class="active" href="{% url 'doctor' }">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -90,9 +90,9 @@
                           <span>Doctor Panel</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="{% url new_patient %}">Create New Patient</a></li>
-                          <li><a  href="{% url update_patient %}">Update Patient</a></li>
-                          <li><a  href="{% url create_notes % }">Create Notes</a></li>
+                          <li><a  href="{% url 'doctor' %}">Create New Patient new_patient</a></li>
+                          <li><a  href="{% url 'doctor' %}">Update Patient update_patient</a></li>
+                          <li><a  href="{% url 'doctor' % }">Create Notes create_notes</a></li>
                       </ul>
                   </li>
 
@@ -102,9 +102,9 @@
                           <span>Patient</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="{% url patient_profile %}">Profile</a></li>
-                          <li><a  href="{% url update_patient_profile %}">Update Profile</a></li>
-                          <li><a  href="{% url notes_patient_view %}">Notes from Doctor</a></li>
+                          <li><a  href="{% url 'doctor' %}">Profile patient_profile</a></li>
+                          <li><a  href="{% url 'doctor' %}">Update Profile update_patient_profile</a></li>
+                          <li><a  href="{% url 'doctor' %}">Notes from Doctor notes_patient_view</a></li>
                       </ul>
                   </li>
                  
