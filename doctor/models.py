@@ -13,7 +13,7 @@ class Doctor(models.Model):
     MIDLLENAME = models.CharField(max_length=40)
     DOB = models.DateField(max_length=8)
     SSN = models.IntegerField(4)
-
+    #unique id
     @property
     def Doctor_ID(self):
         return self.ID

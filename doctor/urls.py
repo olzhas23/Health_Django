@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from django.contrib import admin
 from doctor import views
+#add more
 urlpatterns = [
     url(r'', views.index),
     url(r'^search/', views.search),

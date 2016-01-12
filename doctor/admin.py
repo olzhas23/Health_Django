@@ -18,6 +18,8 @@ class Patient_ID(admin.ModelAdmin):
 admin.site.register(Doctor, Doctor_ID)
 admin.site.register(Patient,Patient_ID)
 
+#new
+
 
 
 

@@ -7,7 +7,7 @@ class PostForm(forms.ModelForm):
 
     class Meta:
 
-        #model = Patient
+        model = Patient
         #add notes latter
         doctor_rec = Notes
         fields = ('FIRSTNAME', 'LASTNAME','NOTES')

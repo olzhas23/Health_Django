@@ -35,5 +35,6 @@ def page(req):
     else:
       return HttpResponse("N/A")
   else:
+    #change file
     patient_list = Doctor.objects.all()
     return render(request, 'newnew.html')

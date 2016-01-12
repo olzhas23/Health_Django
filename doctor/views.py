@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from doctor.models import Doctor, Patient, Notes
 from django.views.generic import ListView, CreateView
 from .forms import PostForm
-
+#needs refractoring
 def index(req):
     return render(req,'templates/patient.html')
 
