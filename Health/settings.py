@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname((os.path.abspath(__file__))
 #SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['https://health-doc-pat.herokuapp.com']
