@@ -25,7 +25,7 @@ SECRET_KEY = '(f&c7m88fm)+#5&u!fwh1ddr!)iuxq&*0euffd$c)n_3rf)%k2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'Health.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [''],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,15 +79,15 @@ WSGI_APPLICATION = 'Health.wsgi.application'
 
 DATABASES = {
     'default': {
-      #  'ENGINE': 'django.db.backends.sqlite3',
-       # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.path.join(BASE_DIR, 'health'),
-        'USER': 'dcd2vank3u6bia',
-        'PASSWORD': 'jZhoezZDVmk9vIDXKqh70cmlcY',
-        'HOST': 'ec2-75-101-143-150.compute-1.amazonaws.com',
-        'PORT': '5432',
+      #  'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'NAME': os.path.join(BASE_DIR, 'health'),
+       # 'USER': 'dcd2vank3u6bia',
+ #       'PASSWORD': 'jZhoezZDVmk9vIDXKqh70cmlcY',
+      #  'HOST': 'ec2-75-101-143-150.compute-1.amazonaws.com',
+        #'PORT': '5432',
 
     }
 }
@@ -140,14 +140,14 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join('static'),
 )
 
 
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'Health/templates'),
-    'doctor', 'static'
+    'doctor',
 )
 
 
