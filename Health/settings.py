@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname((os.path.abspath(__file__))
 #SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['https://health-doc-pat.herokuapp.com']
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'Health.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': "django.db.backends.postgresql_psycopg2",
+        'ENGINE': "django.db.backends.postgresql_psycopg2_psycopg2",
          'NAME': os.path.join(BASE_DIR, 'health'),
        # 'USER': 'dcd2vank3u6bia',
  #       'PASSWORD': 'jZhoezZDVmk9vIDXKqh70cmlcY',
