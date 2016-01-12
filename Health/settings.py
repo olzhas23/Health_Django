@@ -84,9 +84,9 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.path.join(BASE_DIR, 'health'),
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'USER': 'dcd2vank3u6bia',
+        'PASSWORD': 'jZhoezZDVmk9vIDXKqh70cmlcY',
+        'HOST': 'ec2-75-101-143-150.compute-1.amazonaws.com',
         'PORT': '5432',
 
     }
