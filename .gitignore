@@ -3,5 +3,4 @@
 venv
 staticfiles
 .env
-.whl
 .DS_Store
