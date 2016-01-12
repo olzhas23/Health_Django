@@ -30,7 +30,7 @@ def existing_patient(req):
 
     return render (req, 'templates/doctor.html', {"patient_name": Patient.objects.all()})
 
-def add_new_record(req):
+def patient_new_record(req):
 
     if req.method == "POST":
         print('Add new record')
